@@ -1,0 +1,2 @@
+# idwr
+IDWR interpolation algorithm
