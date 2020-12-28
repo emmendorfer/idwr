@@ -38,7 +38,7 @@ def idwr(x,y,z,xnew,ynew):
         for i in range(n):
             v1=array([x[i],y[i]])
             v2=array([xnew[j],ynew[j]])
-            dist[i]=sqrt(sum((v1-v2)**2))  #Euclidean distance in R**2           
+            dist[i]=sqrt(sum((v1-v2)**2))  #Euclidean distance       
         w=dist**(-2)
         s=1/sum(w)
         ws=w*s  # Weights
