@@ -20,7 +20,6 @@ from scipy.interpolate import Rbf
 from scipy.interpolate import LinearNDInterpolator
 from scipy.interpolate import SmoothBivariateSpline
 import math
-import time
 from functions import somb
 from functions import rosen
 from functions import rast
@@ -101,36 +100,26 @@ for ind in range(4): # nunmber of input points divided by 100
                  p_erroridwr[pos]=(zidwr - z[pos]) ** 2
                  
                  #Kriging
-                 pretime= time.time() 
                  OKmodel = OrdinaryKriging(xsel,ysel,zsel,variogram_model="gaussian",verbose=False,enable_plotting=False)
-                 
-                 pretime= time.time() 
                  zkrig_pre, ss = OKmodel.execute("grid", [x[pos]], [y[pos]])
                  zkrig=zkrig_pre.data[0][0]
                 
                  p_errorkrig[pos]=(zkrig - z[pos]) ** 2
                  try:
                      # RBF
-                     pretime= time.time() 
-                     rbfi = Rbf(xsel, ysel, zsel)  # radial basis function interpolator instance
-                    
-                     pretime= time.time()                      
+                     rbfi = Rbf(xsel, ysel, zsel)  # radial basis function interpolator instance        
                      zrbf = (rbfi([x[pos]], [y[pos]]))[0]
                      p_errorrbf[pos]=(zrbf - z[pos]) ** 2
                  except:
-                     e=0#print("Error RBF")
+                     print("Error RBF")
              
                  try:
                      #SBS    
-                     pretime= time.time() 
                      bvs=SmoothBivariateSpline(xsel,ysel,zsel)
-                   
-                     pretime=time.time()
-                     zbvs=bvs.ev([x[pos]],[y[pos]])[0]  
-                                     
+                     zbvs=bvs.ev([x[pos]],[y[pos]])[0]         
                      p_errorbvs[pos]=(zbvs - z[pos]) ** 2            
                  except:
-                     e=0;#print("Error SBS")
+                     print("Error SBS")
          
  
              erroridw[rep,fi]=np.sqrt(p_erroridw.mean())
