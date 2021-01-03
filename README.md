@@ -5,7 +5,7 @@ This project contains the source code of the IDWR interpolation algorithm and al
  
 The file "idwr.py" contains the Python code of IDWR and also IDW.
 
-Some demostrations on how to use IDWR, sample datasets and also the code used to build some tables and figures in the paper are also available in the folder "demos".   
+Some demostrations on how to use IDWR, sample datasets and also the code used to build some tables and figures in the paper are also available in the folder "demo".   
  
 The IDWR was initially proposed in:
 
