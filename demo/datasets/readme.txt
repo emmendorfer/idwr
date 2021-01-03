@@ -1,2 +1,2 @@
 
-This folder contains the datasets which were used to evaluate IDWR algorithm.
+This folder contains the real-world datasets used to evaluate IDWR algorithm.
