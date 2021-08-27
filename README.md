@@ -1,7 +1,8 @@
 # idwr
 This project contains the source code of the IDWR interpolation algorithm and also the code used for its evaluation, as described in the paper:
 
- L. R. Emmendorfer, G. P. Dimuro, A point interpolation algorithm resulting from weighted linear regression (to appear, 2021)
+L. R. Emmendorfer and G. P. Dimuro. "A point interpolation algorithm resulting from weighted linear regression." Journal of Computational Science 50 (2021): 101304.
+URL https://www.sciencedirect.com/science/article/abs/pii/S1877750321000053
  
 The file "idwr.py" contains the Python code of IDWR and also IDW.
 
