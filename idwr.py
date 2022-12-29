@@ -44,7 +44,7 @@ def idwr(x,y,z,xnew,ynew):
 
 
 def idw(x,y,z,xnew,ynew):
-    '''Computes the interpolation from input points using the IDWR method.'''
+    '''Computes the interpolation from input points using the original IDW method.'''
 
 # The IDW interpolation method. It was used in:
 # L. R. Emmendorfer, G. P. Dimuro, A novel formulation for 
